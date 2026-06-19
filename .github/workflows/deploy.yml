@@ -12,9 +12,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build site in LAB8 directory
-        working-directory: ./LAB8
-        run: python build.py
+      - run: |
+          cd LAB8
+          python build.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: LAB8/site/

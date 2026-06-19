@@ -13,8 +13,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pytest ruff
-      - name: Run lint and tests in LAB8 directory
-        working-directory: ./LAB8
-        run: |
+      - run: |
+          cd LAB8
           ruff check . || true
-          pytest -q
+          pytest -v
